@@ -6,7 +6,6 @@ services:
     image: mongo
     ports:
       - "27017"
-    network_mode: test
     volumes:
       - ./data/db:/data/db
   app:
@@ -15,7 +14,6 @@ services:
       image: app-image
       ports:
         - "8081:8081"
-      network_mode: test
       depends_on:
         - mongo
       command: /bin/sh -c "npm start"
