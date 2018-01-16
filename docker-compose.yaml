@@ -3,7 +3,7 @@ services:
   mongo:
     command: bash -c "mongod --bind_ip_all"
     container_name: mongo_test
-    image: mongo-server
+    image: mongo
     ports:
       - "27017"
     network_mode: test
